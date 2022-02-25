@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 25vh;
+    width: 100%;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > h1 , p {
+    text-align: center;
+    padding-top: 10px;
+}
+.invio1{
+    
+    top: 90px;
+    left: 38%;
+    padding: 10px;
+}
+
+.invio2{
+    
+    top: 90px;
+    left: 53%;
+    padding: 10px;
+    color: green;
+}
+
+.input{
+    padding-top: 20px;
+}
+
+main{
+    position: relative
+}
+
+main > ul > li{
+    border: 2px solid green;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 20%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 40%;
+    margin-top: 10px;
+}
