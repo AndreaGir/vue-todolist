@@ -48,7 +48,7 @@ main > ul > li{
     min-width: 20%;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    right: 40%;
+    margin-right: 550px;
+    margin-left: 550px;
     margin-top: 10px;
 }

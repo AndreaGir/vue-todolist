@@ -17,8 +17,8 @@
             <h1>Crea la tua nuova palestra!</h1>
             <p>Aggiungi, modifica, personalizza la tua lista dei desideri per creare la tua nuova palestra semplicemente da casa tua!</p>
             <div class="input">
-                <input class="invio1"type="text">
-                <input class="invio2" type="button" value="Aggiungi">
+                <input class="invio1"type="text" v-model="newOggetto" >
+                <input class="invio2" type="button" value="Aggiungi" @click="addOggetti">
                 
             </div>
             
@@ -26,10 +26,10 @@
 
         <main>
 
-            <ul>
-                <li>
-                    Bilanciere
-                    <i class="fa-solid fa-heart"></i>
+            <ul >
+                <li v-for=" elementi in oggetti ">
+                    {{ elementi.text }} {{ elementi.done }}
+                    <i class="fa-solid fa-cart-arrow-down"></i>
                 </li>
                 
             </ul>
