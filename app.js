@@ -1,36 +1,41 @@
-const app = new Vue(
-    {
-        el: '#tutto',
-        data: {
-
-            newOggetto : [{text: '' }],
-
-            oggetti: [
-                {
-                    text: 'Panca piana',
-                    done:  'si',
-                },
-                {
-                    text: 'Bilanciere',
-                    done: 'no',
-                },
-                {
-                    text: 'Pesi da 10K',
-                    done: 'si',
-                },
-                {
-                    text: '',
-                }
-            ],
-        },
-
-        methods: {
-            addOggetti: function(){
-                /* this.oggetti.push( { ...this.newOggetto } ); */
-                /* this.oggetti.push({ newOggetto: this.newOggetto}); */
-                this.ogetti.push({ text: '' });
+const app = new Vue({
+    el: '#app',
+    data: {
+        newOggetto: '',
+        oggetti: [
+            {
+                text: 'Panca piana',
+            },
+            {
+                text: 'Bilanciere',
+               
+            },
+            {
+                text: 'Pesi da 10K',
+                
+            },
+        ],
+    },
+    methods: {
+        addOggetti: function(){
+            if( this.newOggetto !== ''){
+                let oggetto =  {
+                    text: this.newOggetto
+                };
+                this.oggetti.push(oggetto)
+                this.newOggetto = '';
+            } else {
+                alert('Devi scrivere qualcosa per poterlo aggiungere alla lista')
             }
             
-
+        },
+        delateTodo(i) {
+                 
+            this.oggetti.splice(i , 1);
+        },
+        cart(i){
+            this.oggetti.splice(i , 1);
+            alert(`Hai aggiunto al carrello l'ogetto`)
         }
-}) 
+    }
+});
