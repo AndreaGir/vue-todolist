@@ -27,11 +27,11 @@
         <main>
 
             <ul >
-                <li v-for=" elementi in oggetti ">
+                <li v-for=" (elementi , i) in oggetti ">
                     {{ elementi.text }} 
                     <div>
                         <i class="fa-solid fa-cart-arrow-down" @click="cart(i)"></i>
-                        <i class="fa-solid fa-x" @click="delateTodo(i , 1)"></i>
+                        <i class="fa-solid fa-x" @click.stop="delateTodo(i , 1)"></i>
                         
                     </div>
                     
